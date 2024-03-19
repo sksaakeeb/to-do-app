@@ -160,7 +160,7 @@ const index = () => {
               </View>
               <View>
                 <Text style={{ fontSize: 18, fontWeight: "400" }}>Theme</Text>
-                <Text style={{ color: "gray" }}>Choose theme</Text>
+                <Text style={{ color: "gray" }}>Choose themcce.</Text>
               </View>
             </View>
           </Pressable>
