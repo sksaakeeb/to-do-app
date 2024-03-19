@@ -1,13 +1,18 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, Alert } from "react-native";
 import React from "react";
 
 import { Ionicons, Feather, AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 
-const settings = () => {
+const index = () => {
   const router = useRouter();
   const handleLogout = async () => {
+    Alert.alert(
+      "Log out of your account?",
+      "Once you log out you need to login again.",
+      [{ text: "No", onPress: () => router.back() }, { text: "Yes" }]
+    );
     try {
       // Clear user authentication state, tokens, or any other relevant data.
       await AsyncStorage.clear();
@@ -179,6 +184,6 @@ const settings = () => {
   );
 };
 
-export default settings;
+export default index;
 
 const styles = StyleSheet.create({});
