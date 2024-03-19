@@ -4,6 +4,9 @@ import { LineChart } from "react-native-chart-kit";
 import axios from "axios";
 import LottieView from "lottie-react-native";
 
+import { Feather } from "@expo/vector-icons";
+import { router } from "expo-router";
+
 const index = () => {
   const [completedTasks, setCompletedTasks] = useState(0);
   const [pendingTasks, setPendingTasks] = useState(0);
@@ -50,6 +53,17 @@ const index = () => {
           <Text style={{ fontSize: 15, color: "gray", marginTop: 4 }}>
             Select Categories
           </Text>
+        </View>
+
+        <View style={{ marginLeft: "auto" }}>
+          <Feather
+            onPress={() => {
+              router.push("/[tab]/profile/settings");
+            }}
+            name="settings"
+            size={24}
+            color="black"
+          />
         </View>
       </View>
 

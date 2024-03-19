@@ -13,6 +13,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigation } from "expo-router";
 import { useRouter } from "expo-router";
 import axios from "axios";
+import LottieView from "lottie-react-native";
 
 import { MaterialIcons, FontAwesome6 } from "@expo/vector-icons";
 
@@ -53,20 +54,21 @@ const login = () => {
     <SafeAreaView
       style={{ flex: 1, backgroundColor: "white", alignItems: "center" }}
     >
-      <View style={{ marginTop: 80 }}>
-        <Text style={{ fontSize: 20, fontWeight: "600", color: "blue" }}>
-          TO-DO LIST TRACKER
-        </Text>
-      </View>
+      <LottieView
+        style={{ height: 200, width: 200, marginTop: 15 }}
+        source={require("../[tab]/animations/login-animation.json")}
+        autoPlay
+        loop
+      />
 
       <KeyboardAvoidingView>
         <View style={{ alignItems: "center" }}>
-          <Text style={{ fontSize: 16, fontWeight: "500", marginTop: 20 }}>
+          <Text style={{ fontSize: 18, fontWeight: "700", marginTop: 20 }}>
             Login to your account
           </Text>
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{ marginTop: 5 }}>
           <View
             style={{
               flexDirection: "row",
@@ -105,7 +107,7 @@ const login = () => {
               backgroundColor: "#E0E0E0",
               paddingVertical: 5,
               borderRadius: 5,
-              marginTop: 30,
+              marginTop: 10,
             }}
           >
             <FontAwesome6

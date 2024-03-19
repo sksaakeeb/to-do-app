@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import { MaterialIcons, FontAwesome6, AntDesign } from "@expo/vector-icons";
+import LottieView from "lottie-react-native";
 
 const register = () => {
   const [name, setName] = useState("");
@@ -49,20 +50,21 @@ const register = () => {
     <SafeAreaView
       style={{ flex: 1, backgroundColor: "white", alignItems: "center" }}
     >
-      <View style={{ marginTop: 80 }}>
-        <Text style={{ fontSize: 18, fontWeight: "600", color: "blue" }}>
-          TO-DO LIST TRACKER
-        </Text>
-      </View>
+      <LottieView
+        style={{ height: 200, width: 200, marginTop: 15 }}
+        source={require("../[tab]/animations/signup-animation.json")}
+        autoPlay
+        loop
+      />
 
       <KeyboardAvoidingView>
         <View style={{ alignItems: "center" }}>
-          <Text style={{ fontSize: 16, fontWeight: "500", marginTop: 20 }}>
+          <Text style={{ fontSize: 18, fontWeight: "700", marginTop: 20 }}>
             Register your account
           </Text>
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{ marginTop: 5 }}>
           <View
             style={{
               flexDirection: "row",
@@ -101,7 +103,7 @@ const register = () => {
               backgroundColor: "#E0E0E0",
               paddingVertical: 5,
               borderRadius: 5,
-              marginTop: 30,
+              marginTop: 10,
             }}
           >
             <MaterialIcons
@@ -131,7 +133,7 @@ const register = () => {
               backgroundColor: "#E0E0E0",
               paddingVertical: 5,
               borderRadius: 5,
-              marginTop: 30,
+              marginTop: 10,
             }}
           >
             <FontAwesome6
@@ -184,7 +186,7 @@ const register = () => {
             style={{ marginTop: 15 }}
           >
             <Text style={{ textAlign: "center" }}>
-              Already have an account? Sign up
+              Already have an account? Log in
             </Text>
           </Pressable>
         </View>
