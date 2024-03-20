@@ -62,6 +62,7 @@ const index = () => {
       <ScrollView>
         {todos?.map((item, index) => (
           <Pressable
+            key={index}
             style={{
               backgroundColor: "#E0E0E0",
               padding: 10,
@@ -69,7 +70,6 @@ const index = () => {
               marginVertical: 6,
               marginHorizontal: 10,
             }}
-            key={index}
           >
             <View
               style={{
