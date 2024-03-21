@@ -58,7 +58,7 @@ const index = () => {
         <View style={{ marginLeft: "auto" }}>
           <Feather
             onPress={() => {
-              router.push("/[settings]/main");
+              router.push("/[settings]/MainScreen");
             }}
             name="settings"
             size={24}

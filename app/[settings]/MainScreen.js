@@ -5,7 +5,7 @@ import { Ionicons, Feather, AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 
-const index = () => {
+const MainScreen = () => {
   const router = useRouter();
   const handleLogout = async () => {
     Alert.alert(
@@ -58,7 +58,11 @@ const index = () => {
             alignItems: "center",
           }}
         >
-          <Pressable>
+          <Pressable
+            onPress={() => {
+              router.push("/MainScreen/YourAccount");
+            }}
+          >
             <View
               style={{ flexDirection: "row", alignItems: "center", gap: 30 }}
             >
@@ -102,7 +106,11 @@ const index = () => {
             alignItems: "center",
           }}
         >
-          <Pressable>
+          <Pressable
+            onPress={() => {
+              router.push("/MainScreen/PrivacyAndSecurity");
+            }}
+          >
             <View
               style={{ flexDirection: "row", alignItems: "center", gap: 30 }}
             >
@@ -160,7 +168,7 @@ const index = () => {
               </View>
               <View>
                 <Text style={{ fontSize: 18, fontWeight: "400" }}>Theme</Text>
-                <Text style={{ color: "gray" }}>Choose themcce.</Text>
+                <Text style={{ color: "gray" }}>Choose theme.</Text>
               </View>
             </View>
           </Pressable>
@@ -184,6 +192,6 @@ const index = () => {
   );
 };
 
-export default index;
+export default MainScreen;
 
 const styles = StyleSheet.create({});
