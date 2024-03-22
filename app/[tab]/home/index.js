@@ -157,7 +157,7 @@ const index = () => {
             padding: 10,
           }}
         >
-          <Text style={{ color: "white", textAlign: "center" }}>All</Text>
+          <Text style={{ color: "white", textAlign: "center" }}>Wishlist</Text>
         </Pressable>
 
         <Pressable
